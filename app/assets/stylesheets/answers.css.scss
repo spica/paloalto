@@ -140,3 +140,22 @@ input[type="submit"] {
   top: 30px;
   left: 520px;
 }
+
+.dummy_container {
+  display: block;
+  margin: auto;
+  width: 750px;
+  height: 772px;
+  background-image: image-url("dummy_mail.JPG");
+  position: relative;
+}
+
+.dummy_pointer {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 570px;
+  left: 110px;
+}

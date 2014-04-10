@@ -12,7 +12,8 @@ Paloalto::Application.routes.draw do
   end
 
   get "admins/index" => "admins#index"
-  get "admins/index/question" => "admins#inex_question"
+  get "admins/index/question" => "admins#index_question"
+  get "mail" => "answers#dummy"
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

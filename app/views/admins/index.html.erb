@@ -36,12 +36,12 @@
           <td><%= ans.work_level %></td>
           <td><%= ans.email %></td>
           <td><%= ans.cellphone %></td>
-          <td><%= @answer[:answer_1][ans.answer_1] %></td>
-          <td><%= @answer[:answer_2][ans.answer_2] %></td>
-          <td><%= @answer[:answer_3][ans.answer_3] %></td>
-          <td><%= @answer[:answer_4][ans.answer_4] %></td>
-          <td><%= @answer[:answer_5][ans.answer_5] %></td>
-          <td><%= @answer[:answer_6][ans.answer_6] %></td>
+          <td><%= @answer[0][ans.answer_1] %></td>
+          <td><%= @answer[1][ans.answer_2] %></td>
+          <td><%= @answer[2][ans.answer_3] %></td>
+          <td><%= @answer[3][ans.answer_4] %></td>
+          <td><%= @answer[4][ans.answer_5] %></td>
+          <td><%= @answer[5][ans.answer_6] %></td>
         </tr>
       <% end %>
     </tbody>

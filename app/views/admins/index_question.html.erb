@@ -1,0 +1,29 @@
+<div container="admin_main_container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>no</th>
+      <th>질문</th>
+      <th colspan="4">답변 통계</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @idx = 0 %>
+      <% @questions.each do |q| %>
+        <tr>
+          <td rowspan="<%= @analysis[@idx].length + 1 %>"><%= @idx + 1 %></td>
+          <td rowspan="<%= @analysis[@idx].length + 1 %>"><%= q %></td>
+          <% 0..@analysis[@idx].length.times do |i|  %>
+            <tr>
+              <td><%= @answer[@idx][i+1] %></td>
+              <td><%= @analysis[@idx][i] %></td>
+              <td><%= @analysis[@idx][i].to_f * 100.0 / @total_num.to_f %> %</td>
+              <td><button class="btn_show_detail" data-qidx="<%= @idx %>" data-aidx="<%= i %>">자세히 보기</button></td>
+            </tr>
+          <% end %>
+        </tr>
+        <% @idx = @idx + 1 %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

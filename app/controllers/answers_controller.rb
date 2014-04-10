@@ -56,4 +56,8 @@ class AnswersController < ApplicationController
   def avr
     render :layout => false
   end
+
+  def dummy
+    render :layout => 'admins'
+  end
 end
