@@ -1,8 +1,9 @@
 class AdminsController < ApplicationController
   before_filter :set_questions_and_answers
-  layout 'admins'
+  layout 'bootstrap'
   def index
     @answers = Answer.all
+    render :layout => 'admins'
   end
 
   def index_question
@@ -41,6 +42,6 @@ class AdminsController < ApplicationController
 
   def show_question_detail
     answer = "answer_" + params[:qid]
-    @answers = Answer.where("#{answer} == #{params[:aid]}")
+    @answers = Answer.where("#{answer} = #{params[:aid]}")
   end
 end

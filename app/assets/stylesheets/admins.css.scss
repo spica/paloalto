@@ -4,5 +4,10 @@
 
 .amdin_main_container {
   width: 100%;
-  overflow: auto;
+  overflow-x: scroll;
+}
+
+.admin_index_container {
+  max-width: 5000px;
+  width: 5000px;
 }

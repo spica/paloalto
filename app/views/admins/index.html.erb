@@ -1,8 +1,23 @@
-<div container="admin_main_container">
-  <table class="table">
+<div container="admin_index_container">
+  <table class="table table-striped table-hover table-condensed admin_index">
+    <colgroup>
+      <col width="120px;">
+      <col width="120px;">
+      <col width="120px;">
+      <col width="120px;">
+      <col width="100px;">
+      <col width="200px;">
+      <col width="140px;">
+      <col width="400px;">
+      <col width="500px;">
+      <col width="550px;">
+      <col width="500px;">
+      <col width="500px;">
+      <col width="500px;">
+    </colgroup>
     <thead>
-    <tr>
-      <th colspan="7">Information</th>
+    <tr class="row">
+      <th colspan="6">Information</th>
       <th>Q1</th>
       <th>Q2</th>
       <th>Q3</th>
@@ -26,7 +41,7 @@
       <th><%= @questions[5] %></th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="">
       <% @answers.each do |ans| %>
         <tr>
           <td><%= ans.company_name %></td>

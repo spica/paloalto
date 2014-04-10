@@ -1,5 +1,13 @@
 <div container="admin_main_container">
-  <table class="table">
+  <table class="table table-hover">
+    <colgroup>
+      <col width="30px;">
+      <col>
+      <col width="200px;">
+      <col width="20px;">
+      <col width="90px;">
+      <col width="120px;">
+    </colgroup>
     <thead>
     <tr>
       <th>no</th>
@@ -7,7 +15,7 @@
       <th colspan="4">답변 통계</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="table-hover">
       <% @idx = 0 %>
       <% @questions.each do |q| %>
         <tr>
@@ -17,8 +25,8 @@
             <tr>
               <td><%= @answer[@idx][i+1] %></td>
               <td><%= @analysis[@idx][i] %></td>
-              <td><%= @analysis[@idx][i].to_f * 100.0 / @total_num.to_f %> %</td>
-              <td><button class="btn_show_detail" data-qidx="<%= @idx %>" data-aidx="<%= i %>">자세히 보기</button></td>
+              <td><%= (@analysis[@idx][i].to_f * 100.0 / @total_num.to_f).round(2) %> %</td>
+              <td><button class="btn_show_detail" data-qidx="<%= @idx + 1 %>" data-aidx="<%= i + 1 %>">자세히 보기</button></td>
             </tr>
           <% end %>
         </tr>
