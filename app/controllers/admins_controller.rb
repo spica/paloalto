@@ -43,5 +43,6 @@ class AdminsController < ApplicationController
   def show_question_detail
     answer = "answer_" + params[:qid]
     @answers = Answer.where("#{answer} = #{params[:aid]}")
+    render :layout => 'fixed'
   end
 end
