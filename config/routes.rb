@@ -16,6 +16,9 @@ Paloalto::Application.routes.draw do
   get "mail" => "answers#dummy"
   get "admins/index/question/:qid/:aid" => "admins#show_question_detail"
 
+  get "admins/sign_in" => "admins#sign_in"
+  post "admins/authorize" => "admins#authorize"
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

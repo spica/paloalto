@@ -1,6 +1,29 @@
 class AdminsController < ApplicationController
   before_filter :set_questions_and_answers
+  before_filter :auth_check, :except => [:sign_in, :authorize]
   layout 'bootstrap'
+
+  def auth_check
+    if session[:admin] == nil
+      flash[:error] = "로그인 해 주세요."
+      redirect_to "/admins/sign_in"
+    end
+  end
+
+  def sign_in
+
+  end
+
+  def authorize
+    if params[:id] == "admin" and params[:password] == "2dProduct"
+      session[:admin] = "admin"
+      redirect_to "/admins/index"
+    else
+      flash[:error] = "아이디 혹은 비밀번호가 일치하지 않습니다."
+      redirect_to "/admins/sign_in"
+    end
+  end
+
   def index
     @answers = Answer.all
     render :layout => 'admins'
