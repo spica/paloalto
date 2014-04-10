@@ -15,16 +15,16 @@
         <label>부서명:</label> <%= f.text_field :department %>
       </div>
       <div class="phone pull-left">
-        <label>사무실 전화:</label> <%= f.text_field :phone %>
+        <label>사무실 전화:</label> <%= f.text_field :phone, :placeholder => "02-000-0000" %>
       </div>
       <div class="work_level inline">
         <label>직책:</label> <%= f.text_field :work_level %>
       </div>
       <div class="email pull-left">
-        <label>이메일:</label> <%= f.text_field :email %>
+        <label>이메일:</label> <%= f.text_field :email, :placeholder => "sample@gmail.com" %>
       </div>
       <div class="cellphone inline">
-        <label>휴대폰:</label> <%= f.text_field :cellphone %>
+        <label>휴대폰:</label> <%= f.text_field :cellphone, :placeholder => "010-0000-0000" %>
       </div>
     </div>
     <div class="servey_container">

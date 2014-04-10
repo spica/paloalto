@@ -50,10 +50,10 @@ class AnswersController < ApplicationController
   end
 
   def agreement
-
+    render :layout => false
   end
 
   def avr
-
+    render :layout => false
   end
 end
