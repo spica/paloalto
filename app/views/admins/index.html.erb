@@ -1,0 +1,49 @@
+<div container="admin_main_container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th colspan="7">Information</th>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th>Q4</th>
+      <th>Q5</th>
+      <th>Q6</th>
+    </tr>
+    <tr>
+      <th>회사명</th>
+      <th>담당자</th>
+      <th>부서명</th>
+      <th>사무실 전화</th>
+      <th>직책</th>
+      <th>이메일</th>
+      <th>휴대폰</th>
+      <th><%= @questions[0] %></th>
+      <th><%= @questions[1] %></th>
+      <th><%= @questions[2] %></th>
+      <th><%= @questions[3] %></th>
+      <th><%= @questions[4] %></th>
+      <th><%= @questions[5] %></th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @answers.each do |ans| %>
+        <tr>
+          <td><%= ans.company_name %></td>
+          <td><%= ans.manager_name %></td>
+          <td><%= ans.department %></td>
+          <td><%= ans.phone %></td>
+          <td><%= ans.work_level %></td>
+          <td><%= ans.email %></td>
+          <td><%= ans.cellphone %></td>
+          <td><%= @answer[:answer_1][ans.answer_1] %></td>
+          <td><%= @answer[:answer_2][ans.answer_2] %></td>
+          <td><%= @answer[:answer_3][ans.answer_3] %></td>
+          <td><%= @answer[:answer_4][ans.answer_4] %></td>
+          <td><%= @answer[:answer_5][ans.answer_5] %></td>
+          <td><%= @answer[:answer_6][ans.answer_6] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
