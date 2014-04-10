@@ -1,0 +1,136 @@
+// Place all the styles related to the answers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//
+
+//@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #eff3ef;
+}
+
+div.container {
+  display: block;
+  margin: auto;
+  width: 750px;
+  height: 772px;
+  background-image: image-url("Background.jpg");
+}
+
+#logo {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.userinfo_container {
+  font-size: 12pt;
+  color: #464545;
+  font-weight: 350;
+  width: 400px;
+  margin: auto;
+  margin-top: 25px;
+  div {
+    width: 200px;
+  }
+  
+  input {
+    width: 80px;
+  }
+
+  label {
+    width: 100px;
+    display: inline-block;
+  }
+
+  div.company_name {
+    display:block;
+    width: 400px;
+    input {
+      width: 280px;
+    }
+  }
+}
+
+.inline {
+  margin-left: 240px;
+  label {
+    width: 60px;
+    display: inline-block;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+
+.servey_container {
+  font-size: 12pt;
+  color: #2A2A2A;
+  font-weight: 350;
+  width: 100%;
+  margin: auto;
+  margin-left: 20px;
+  div.question {
+    margin-top: 20px;
+    label {
+      font-size: 10pt;
+    }
+  }
+  div.question_2, div.question_4, div.question_5, div.question_6 {
+    label {
+      margin-right: 150px;
+    }
+  }
+  p {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+  border: none;
+  background-image: image-url("check.png");
+  width: 11px;
+  height: 11px;
+  margin-left: 25px;
+}
+
+input[type="radio"]:checked {
+  -webkit-appearance: radio;
+}
+input[type="submit"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 176px;
+  height: 47px;
+  background-image: image-url("btn_submit.png");
+  background-color: rgba(0,0,0,0);
+}
+
+.footer {
+  position: relative;
+  font-size: 10pt;
+  color: #2a2a2a;
+  div.left_container {
+    width: 550px;
+    float: left;
+  }
+}
+
+.footer .blue {
+  color: #199fce;
+}
+
+.submit_btn {
+  width: 176px;
+  height: 50px;
+  position: absolute;
+  top: 35px;
+  left: 560px;
+}

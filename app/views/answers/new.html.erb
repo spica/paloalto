@@ -1,0 +1,114 @@
+<div id="logo">
+  <%= image_tag("logo.png") %>
+</div>
+
+<div id="main_container">
+  <%= form_for @answer, :url => answers_path do |f| %>
+    <div class="userinfo_container">
+      <div class="company_name">
+        <label>회사명:</label> <%= f.text_field :company_name %>
+      </div>
+      <div class="manager_name pull-left">
+        <label>담당자 이름:</label> <%= f.text_field :manager_name %>
+      </div>
+      <div class="department inline">
+        <label>부서명:</label> <%= f.text_field :department %>
+      </div>
+      <div class="phone pull-left">
+        <label>사무실 전화:</label> <%= f.text_field :phone %>
+      </div>
+      <div class="work_level inline">
+        <label>직책:</label> <%= f.text_field :work_level %>
+      </div>
+      <div class="email pull-left">
+        <label>이메일:</label> <%= f.text_field :email %>
+      </div>
+      <div class="cellphone inline">
+        <label>휴대폰:</label> <%= f.text_field :cellphone %>
+      </div>
+    </div>
+    <div class="servey_container">
+      <div class="question question_1">
+        <p class="question">
+          1.현재 사용 중인 데스크톱/노트북 대수는 어떻게 되십니까?
+        </p>
+        <%= f.radio_button(:answer_1, 1) %>
+        <%= f.label(:answer_1, "100대 미만") %>
+        <%= f.radio_button(:answer_1, 2) %>
+        <%= f.label(:answer_1, "100대 이상~1,000대 미만") %>
+        <%= f.radio_button(:answer_1, 3) %>
+        <%= f.label(:answer_1, "1,000대 이상~5,000대 미만") %>
+        <%= f.radio_button(:answer_1, 4) %>
+        <%= f.label(:answer_1, "5,000대 이상~10,000대 미만") %>
+        <%= f.radio_button(:answer_1, 5) %>
+        <%= f.label(:answer_1, "10,000대 이상") %>
+      </div>
+      <div class="question question_2">
+        <p class="question">
+          2.차세대 방화벽에 대해서 알고 계시거나 소개를 받으신 적이 있습니까?
+        </p>
+        <%= f.radio_button(:answer_2, 1) %>
+        <%= f.label(:answer_2, "예") %>
+        <%= f.radio_button(:answer_2, 2) %>
+        <%= f.label(:answer_2, "아니오") %>
+      </div>
+      <div class="question question_3">
+        <p class="question">
+          3.현재 사용하고 계시는 방화벽에 대한 불만사항이 있다면 어떤 것이 있습니까?
+        </p>
+        <%= f.radio_button(:answer_3, 1) %>
+        <%= f.label(:answer_3, "성능이슈") %> <br />
+        <%= f.radio_button(:answer_3, 2) %>
+        <%= f.label(:answer_3, "관리 편의성 부족") %> <br />
+        <%= f.radio_button(:answer_3, 3) %>
+        <%= f.label(:answer_3, "보안기능 미비") %> <br />
+        <%= f.radio_button(:answer_3, 4) %>
+        <%= f.label(:answer_3, "없음") %>
+      </div>
+      <div class="question question_4">
+        <p class="question">
+          4. 차세대 방화벽 구축 프로젝트에 대해서 방문컨설팅을 원하십니까?
+        </p>
+        <%= f.radio_button(:answer_4, 1) %>
+        <%= f.label(:answer_4, "예") %>
+        <%= f.radio_button(:answer_4, 2) %>
+        <%= f.label(:answer_4, "아니오") %>
+      </div>
+      <div class="question question_5">
+        <p class="question">
+          5. 팔로알토 네트웍스 솔루션에 관한 제품정보, 신제품 출시, 세미나 초청 등 마케팅 관련 자료를 수신하겠습니까?
+        </p>
+        <%= f.radio_button(:answer_5, 1) %>
+        <%= f.label(:answer_5, "예") %>
+        <%= f.radio_button(:answer_5, 2) %>
+        <%= f.label(:answer_5, "아니오") %>
+      </div>
+      <div class="question question_6">
+        <p class="question">
+          6. 팔로알토 네트웍스의 AVR(Application Visibility and Risk Report) 프로그램을 통해 귀사의 네트워크에 대한 건강 진단을 원하십니까?
+        </p>
+        <%= f.radio_button(:answer_6, 1) %>
+        <%= f.label(:answer_6, "예") %>
+        <%= f.radio_button(:answer_6, 2) %>
+        <%= f.label(:answer_6, "아니오") %>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="left_container">
+        <div class="agreement">
+          <input type="button" id="show_agreement" value="동의서보기"> <label for="agreement">동의함</label> <input type="checkbox" id="agreement" name="agreement" />
+        </div>
+        <p>
+          본 프로모션에 대한 결과 발표는 6월 둘째주까지 당첨자에게 개별 통보됩니다.
+        </p>
+        <p>
+          본 프로모션의 내용은 별도의 통보 없이 당사의 사정에 의해 부득이 변경될 수 있습니다.
+        </p>
+      </div>
+      <div class="submit_btn">
+        <%= f.submit "" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
