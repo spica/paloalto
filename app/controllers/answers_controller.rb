@@ -30,7 +30,9 @@ class AnswersController < ApplicationController
     
     if @answer.save
       Rails.logger.info("save success!")
-      redirect_to @answer
+      rlt = {}
+      rlt[:success] = true
+      render :json => rlt.to_json
     else
       Rails.logger.info("save fail!")
       render :action => "new"

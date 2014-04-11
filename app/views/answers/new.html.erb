@@ -1,5 +1,5 @@
 <div id="main_container">
-  <%= form_for @answer, :url => answers_path do |f| %>
+  <%= form_for @answer, :url => answers_path, :remote => true do |f| %>
       <%= f.text_field :company_name, :class => "form_1" %>
       <%= f.text_field :manager_name, :class => "form_2" %>
       <%= f.text_field :department, :class => "form_3" %>

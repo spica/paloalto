@@ -8,7 +8,6 @@ $ ->
   $('#show_agreement').click () ->
     window.open("/answers/agreement", "_blank", "scrollbars=1,resizable=1,height=632,width=905")
   $('form').submit (e) ->
-    console.log("submit!")
     company_name = $('#answer_company_name').val()
     if company_name == ""
       alert ("회사명을 입력하세요.")
@@ -58,4 +57,15 @@ $ ->
     if $('input[name="agreement"]:checked').length == 0
       alert ("개인 정보 처리에 동의 하셔야 합니다.")
       return false
-    return true
+    data = $(this).serialize()
+    $.ajax
+      url: $(this).attr('action')
+      data: data
+      method: "post"
+      dataType: "JSON"
+      success: (e) ->
+        alert ("설문에 참여해 주셔서 감사합니다.")
+        window.location = "https://www.paloaltonetworks.com"
+      error: (e)->
+        alert("오류가 발생했습니다. 다시 시도해 주세요.")
+    return false
