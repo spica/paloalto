@@ -157,8 +157,29 @@ input[type="submit"] {
   display: block;
   position: absolute;
   top: 570px;
-  left: 110px;
+  left: 122px;
 }
+
+.dummy_mail {
+  width: 100px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 696px;
+  left: 132px;
+}
+
+.dummy_link {
+  width: 200px;
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  left: 257px;
+}
+
  #show_agreement {
    border: none;
    cursor: pointer;
