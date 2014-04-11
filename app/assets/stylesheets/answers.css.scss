@@ -16,129 +16,42 @@ div.app_container {
   width: 750px;
   height: 772px;
   background-image: image-url("Background.jpg");
+  position: relative;
+  z-index: 12;
 }
-
-#logo {
-  width: 200px;
-  height: 50px;
-  margin: auto;
-  padding-top: 15px;
+#main_container {
+  width: 700px;
+  margin: 0 auto;
+  color: #065580;
+  z-index: 10;
 }
-
-.userinfo_container {
-  font-size: 12pt;
-  color: #464545;
-  font-weight: 350;
-  width: 400px;
-  margin: auto;
-  margin-top: 25px;
-  div {
-    width: 200px;
-  }
-
-  div.pull-left {
-    width: 240px;
-  }
-  
-  input {
-    width: 100px;
-  }
-
-  label {
-    width: 100px;
-    display: inline-block;
-  }
-
-  div.company_name {
-    display:block;
-    width: 400px;
-    input {
-      width: 290px;
-    }
-  }
-}
-
-.inline {
-  margin-left: 240px;
-  label {
-    width: 60px;
-    display: inline-block;
-  }
+#main_container form{
+  width: 700px;
+  float: left;
+  z-index: 10;
+  margin: 0 auto;
 }
 
 .pull-left {
   float: left;
 }
 
-
-.servey_container {
-  font-size: 12pt;
-  color: #2A2A2A;
-  font-weight: 350;
-  width: 100%;
-  margin: auto;
-  margin-left: 20px;
-  div.question {
-    margin-top: 20px;
-    label {
-      font-size: 10pt;
-    }
-  }
-  div.question_2, div.question_4, div.question_5, div.question_6 {
-    label {
-      margin-right: 150px;
-    }
-  }
-  p {
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
-  }
-}
-
-input[type="radio"] {
-  -webkit-appearance: radio;
-  border: none;
-  background-image: image-url("check.png");
-  width: 11px;
-  height: 11px;
-  margin-left: 25px;
-}
-
-input[type="radio"]:checked {
-  -webkit-appearance: radio;
-}
 input[type="submit"] {
   -webkit-appearance: none;
   border: none;
   width: 176px;
   height: 47px;
-  background-image: image-url("btn_submit.png");
   background-color: rgba(0,0,0,0);
-}
-
-.footer {
-  position: relative;
-  font-size: 10pt;
-  color: #2a2a2a;
-  div.left_container {
-    width: 500px;
-    float: left;
-  }
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
-.footer .blue {
-  color: #199fce;
+  cursor: pointer;
 }
 
 .submit_btn {
   width: 176px;
   height: 50px;
   position: absolute;
-  top: 30px;
-  left: 520px;
+  top: 713px;
+  left: 513px;
+  cursor: pointer;
 }
 
 .dummy_container {
@@ -181,7 +94,17 @@ input[type="submit"] {
 }
 
  #show_agreement {
+   position: absolute;
    border: none;
    cursor: pointer;
+   background-color: rgba(12,12,32,0);
+   width: 120px;
+   top: 709px;
+   left: 231px;
+ }
 
+ #agreement {
+   position: absolute;
+   top: 712px;
+   left: 57px;
  }

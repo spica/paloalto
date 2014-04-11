@@ -7,6 +7,10 @@ class AnswersController < ApplicationController
     @answer = Answer.new
   end
 
+  def new2
+    @answer = Answer.new
+  end
+
   def create
     Rails.logger.info(params[:answer])
     @answer = Answer.new
