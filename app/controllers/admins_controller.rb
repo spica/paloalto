@@ -7,7 +7,7 @@ class AdminsController < ApplicationController
   def auth_check
     if session[:admin] == nil
       flash[:error] = "로그인 해 주세요."
-      redirect_to "/admins/sign_in"
+      redirect_to "/admin"
     end
   end
 
@@ -21,7 +21,7 @@ class AdminsController < ApplicationController
       redirect_to "/admins/index"
     else
       flash[:error] = "아이디 혹은 비밀번호가 일치하지 않습니다."
-      redirect_to "/admins/sign_in"
+      redirect_to "/admin"
     end
   end
 
