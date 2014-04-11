@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AdminsController < ApplicationController
   before_filter :set_questions_and_answers
   before_filter :auth_check, :except => [:sign_in, :authorize]
