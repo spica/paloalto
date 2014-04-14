@@ -42,6 +42,7 @@ input[type="submit"] {
   width: 176px;
   height: 47px;
   background-color: rgba(0,0,0,0);
+filter: alpha(opacity=0);
   cursor: pointer;
 }
 
@@ -117,12 +118,15 @@ input[type="submit"] {
    cursor: pointer;
    background-color: rgba(12,12,32,0);
    width: 120px;
+   height: 30px;
    top: 709px;
    left: 231px;
+	 filter: alpha(opacity=0);
  }
 
  #agreement {
    position: absolute;
    top: 712px;
    left: 57px;
+	 filter: alpha(opacity=0);
  }

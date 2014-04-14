@@ -64,6 +64,6 @@ class AnswersController < ApplicationController
   end
 
   def dummy
-    render :layout => 'application'
+    render :layout => false
   end
 end

@@ -1,7 +1,79 @@
-<div class="dummy_container">
+
+<!DOCTYPE html>
+<html>
+<head>
+  <%= csrf_meta_tags %>
+</head>
+<style>
+  @charset "utf-8";
+.dummy_container {
+  display: block;
+  margin: auto;
+  width: 750px;
+  height: 772px;
+  background-image: url(<%= asset_path "dummy_mail.JPG" %>);
+  position: relative;
+}
+
+.dummy_pointer {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 570px;
+  left: 122px;
+}
+
+.dummy_mail {
+  width: 100px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 696px;
+  left: 132px;
+}
+
+.dummy_link {
+  width: 200px;
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  left: 257px;
+}
+.dummy_link_2 {
+  width: 200px;
+  height: 230px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 195px;
+  left: 63px;
+}
+.dummy_link_3 {
+  width: 760px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 750px;
+  left: 20px;
+}
+</style>
+<body>
+<table class="dummy_container">
+<tr>
+<td>
   <a class="dummy_pointer" href="http://paloalto.vps.phps.kr/survey/customer" ></a>
-  <a class="dummy_mail" href="mailto:mkl@jklcompany.co.kr"></a>
+  <a class="dummy_mail" href="mailto:mkt@jklcompany.co.kr"></a>
   <a class="dummy_link" href="https://www.paloaltonetworks.com"></a>
   <a class="dummy_link_2" href="https://www.paloaltonetworks.com"></a>
   <a class="dummy_link_3" href="https://www.paloaltonetworks.com"></a>
-</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
