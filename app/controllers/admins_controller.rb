@@ -26,7 +26,7 @@ class AdminsController < ApplicationController
   end
 
   def index
-    @answers = Answer.all
+    @answers = Answer.all.page params[:page]
     render :layout => 'admins'
   end
 
