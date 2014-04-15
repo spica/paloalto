@@ -40,6 +40,8 @@ gem 'twitter-bootstrap-rails'
 
 gem 'kaminari'
 
+gem 'axlsx'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
